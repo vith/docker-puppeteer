@@ -3,5 +3,7 @@ image:
   entrypoint: [""]
 
 trigger_dockerhub_build:
+  only:
+    - schedules
   script:
     - http --pretty all POST "https://hub.docker.com/api/build/v1/source/$DOCKERHUB_REPO_UUID/trigger/$DOCKERHUB_TRIGGER_ID/call/"
