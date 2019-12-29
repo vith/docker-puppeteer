@@ -1,0 +1,7 @@
+image:
+  name: "alpine/httpie"
+  entrypoint: [""]
+
+trigger_dockerhub_build:
+  script:
+    - http --pretty all POST "$DOCKERHUB_BUILD_TRIGGER_URL"
