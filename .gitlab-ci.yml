@@ -4,4 +4,4 @@ image:
 
 trigger_dockerhub_build:
   script:
-    - http --pretty all POST "$DOCKERHUB_BUILD_TRIGGER_URL"
+    - http --pretty all POST "https://hub.docker.com/api/build/v1/source/$DOCKERHUB_BUILD_TRIGGER_TOKEN"
